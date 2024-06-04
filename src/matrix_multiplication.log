@@ -1,0 +1,25 @@
+Testing matrix size 128x128 for 5 trials and 1 iterations:
+Testing original matrix multiplication:
+Average execution time: 0.00569266 seconds
+Testing optimized matrix multiplication:
+Average execution time: 0.000650496 seconds
+Testing matrix size 256x256 for 5 trials and 1 iterations:
+Testing original matrix multiplication:
+Average execution time: 0.0590195 seconds
+Testing optimized matrix multiplication:
+Average execution time: 0.00112549 seconds
+Testing matrix size 512x512 for 5 trials and 1 iterations:
+Testing original matrix multiplication:
+Average execution time: 0.693574 seconds
+Testing optimized matrix multiplication:
+Average execution time: 0.00592912 seconds
+Testing matrix size 1024x1024 for 5 trials and 1 iterations:
+Testing original matrix multiplication:
+Average execution time: 32.514 seconds
+Testing optimized matrix multiplication:
+Average execution time: 0.0475827 seconds
+Testing matrix size 2048x2048 for 5 trials and 1 iterations:
+Testing original matrix multiplication:
+Average execution time: 305.518 seconds
+Testing optimized matrix multiplication:
+Average execution time: 0.212423 seconds

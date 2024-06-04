@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/file/实训资料/exp2/matrix_multiplication/build",
+  "command": "D:\\codeenviroment\\winlibs-x86_64-posix-seh-gcc-11.3.0-llvm-14.0.3-mingw-w64ucrt-10.0.0-r3\\mingw64\\bin\\c++.exe -ID:/file/实训资料/exp2/matrix_multiplication/include -g -std=gnu++14 -o CMakeFiles\\matrix_multiplication.dir\\src\\main.cpp.obj -c D:\\file\\实训资料\\exp2\\matrix_multiplication\\src\\main.cpp",
+  "file": "D:\\file\\实训资料\\exp2\\matrix_multiplication\\src\\main.cpp",
+  "output": "CMakeFiles\\matrix_multiplication.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "D:/file/实训资料/exp2/matrix_multiplication/build",
+  "command": "D:\\codeenviroment\\winlibs-x86_64-posix-seh-gcc-11.3.0-llvm-14.0.3-mingw-w64ucrt-10.0.0-r3\\mingw64\\bin\\c++.exe -ID:/file/实训资料/exp2/matrix_multiplication/include -g -std=gnu++14 -o CMakeFiles\\matrix_multiplication.dir\\src\\matrix.cpp.obj -c D:\\file\\实训资料\\exp2\\matrix_multiplication\\src\\matrix.cpp",
+  "file": "D:\\file\\实训资料\\exp2\\matrix_multiplication\\src\\matrix.cpp",
+  "output": "CMakeFiles\\matrix_multiplication.dir\\src\\matrix.cpp.obj"
+}
+]
