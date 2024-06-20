@@ -11,8 +11,7 @@ include_directories(include)
 add_executable(matrix_multiplication src/main.cpp src/matrix.cpp)
 
 # 设置编译选项（可选）
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3") # 使用 O3 优化选项
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native") # 使用本地架构优化
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3") # 使用 O3 优化选项
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native") # 使用本地架构优化
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp") # 启用 OpenMP 支持
 
-# 如果需要链接第三方库，可以使用以下命令
-# target_link_libraries(matrix_multiplication -l<库名>)
