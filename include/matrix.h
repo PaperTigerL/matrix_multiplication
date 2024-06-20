@@ -3,46 +3,53 @@
 
 #include <vector>
 #include <stdexcept>
+#include <iostream>
 
-// 矩阵类
-class Matrix {
+// 多维矩阵类
+class MultidimensionalMatrix {
 public:
-    Matrix(int rows, int cols) : data(rows, std::vector<double>(cols, 0.0)), rows(rows), cols(cols) {}
+    MultidimensionalMatrix(const std::vector<int>& dims) : dims(dims) {
+        // 初始化矩阵数据
+        data.resize(1); // 初始化一个一维数据向量
+        for (int i = 0; i < dims.size(); i++) {
+            data.resize(data.size() * dims[i]); // 扩展数据向量以匹配当前维度的大小
+        }
+    }
 
     // 设置矩阵元素
-    void setValue(int row, int col, double value) {
-        if (row >= 0 && row < rows && col >= 0 && col < cols) {
-            data[row][col] = value;
-        } else {
+    void setValue(const std::vector<int>& indices, double value) {
+        if (indices.size() != dims.size()) {
             throw std::out_of_range("Index out of range");
         }
+        int index = 0;
+        for (int i = 0; i < indices.size(); i++) {
+            index = index * dims[i] + indices[i];
+        }
+        data[index] = value;
     }
 
     // 获取矩阵元素
-    double getValue(int row, int col) const {
-        if (row >= 0 && row < rows && col >= 0 && col < cols) {
-            return data[row][col];
-        } else {
+    double getValue(const std::vector<int>& indices) const {
+        if (indices.size() != dims.size()) {
             throw std::out_of_range("Index out of range");
         }
+        int index = 0;
+        for (int i = 0; i < indices.size(); i++) {
+            index = index * dims[i] + indices[i];
+        }
+        return data[index];
     }
 
-    // 获取矩阵行数
-    int getRows() const { return rows; }
-
-    // 获取矩阵列数
-    int getCols() const { return cols; }
+    // 获取矩阵维度
+    const std::vector<int>& getDims() const { return dims; }
 
 private:
-    std::vector<std::vector<double>> data; // 存储矩阵数据
-    int rows; // 行数
-    int cols; // 列数
+    std::vector<int> dims; // 存储矩阵维度
+    std::vector<double> data; // 存储矩阵数据
 };
-
 // 矩阵乘法函数
-//普通实现
-Matrix matrixMultiply(const Matrix& A, const Matrix& B);
-//优化实现
-Matrix matrixMultiply_opt(const Matrix&A,const Matrix& B);
-
+// 普通实现
+MultidimensionalMatrix matrixMultiply(const MultidimensionalMatrix& A, const MultidimensionalMatrix& B);
+// 优化实现
+MultidimensionalMatrix matrixMultiply_opt(const MultidimensionalMatrix& A, const MultidimensionalMatrix& B);
 #endif // MATRIX_H
